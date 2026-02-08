@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "yuki",
+	"version": "${version}",
+	"name": "Yuki",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/yuki/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"ash.modid.Yuki"
+		],
+		"client": [
+			"ash.modid.YukiClient"
+		]
+	},
+	"mixins": [
+		"yuki.mixins.json",
+		{
+			"config": "yuki.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~26.1-",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
